@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .center{
+            text-align: center;
+        }
+        .form{
+            margin-top: 10%;
+            position: absolute;
+            margin-left: 34%;
+            background-color: aqua;
+            height: 30%;
+            width: 30%;
+        }
+        #input1{
+            position: absolute;
+            top: 20%;
+            left: 30%;
+        }
+        #input2{
+            position: absolute;
+            top: 40%;
+            left: 30%;
+        }
+        #input3{
+            position: absolute;
+            top: 80%;
+            left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <form class="form" method="post" action="">
+            <p id="input1">Name:<input type="text" name="name"></p>
+            <br/>
+            <p id="input2"> Password:<input type="password" name="pwd"></p>
+            <br/>{% csrf_token %}
+            <input type="submit" name="submit" value="Submit" id="input3">
+
+        </form>
+    </div>
+</body>
+</html>
